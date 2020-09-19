@@ -1,0 +1,14 @@
+{% extends "base.html "%} {% block body %}
+<div class="container active my-5">
+    <h1 class = "text-center mt-5 py-5">Welcome to CodeP@rk Blog</h1> 
+    {% for blog in blogs %}
+      <div class="my-4"> 
+      
+        <h3 class="mt-0"><a href='/blogpost/{{blog.slug}}' class = "text-dark">{{blog.title}}</a></h3>
+        <div class = 'my-2'>{{blog.content|safe|slice:197}}...
+        </div>
+        <a href='/blogpost/{{blog.slug}}' class = "text-dark"><button type="button" class="btn btn-outline-primary btn-sm">read more...</a></button>
+      </div>
+    {% endfor %}
+</div>
+{% endblock body %}
