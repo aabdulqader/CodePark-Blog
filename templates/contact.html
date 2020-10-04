@@ -1,5 +1,6 @@
 {% extends "base.html "%} 
-{% block contactactive %}active{% endblock contactactive %} 
+{% block contactactive %}active{% endblock contactactive %}
+{% block title %}Contact{% endblock title %} 
 {% block body %}
 
 <body class='bg-secondary'>
@@ -17,7 +18,7 @@
   <p class="text-center my-0 font-weight-bold">Do you have any questions?</p>
   <p class="text-center my-0">Please do not hesitate to contact us directly.</p>
   <p class="text-center my-0">Our team will come back to you within a matter of hours to help you.</p>
-  <form action="/contact" method="post">
+  <form method="post">
     {% csrf_token %}
     <div class="form-group">
       <label for="Name">Your Name</label>
